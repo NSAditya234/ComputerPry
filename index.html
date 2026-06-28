@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>ASP.NET Developer</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-light fixed-top bg-dark shadow-sm">
+        <div class="container-lg">
+            <a class="navbar-brand text-light fw-bold fs-4" href="#">Aditya Narayan Soni</a>
+            <div class="dropdown">
+                <button class="btn btn-outline-light border-2 px-3" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul id="list-example" class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item list-group-item-action" href="#home">Home</a></li>
+                    <li><a class="dropdown-item list-group-item-action" href="#about">About</a></li>
+                    <li><a class="dropdown-item list-group-item-action" href="#services">Services</a></li>
+                    <li><a class="dropdown-item list-group-item-action" href="#portfolio">Portfolio</a></li>
+                    <li><a class="dropdown-item list-group-item-action" href="#testimonial">Testimonial</a></li>
+                    <li><a class="dropdown-item list-group-item-action" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+    <!-- Home Section Starts -->
+    <section class="home py-5 bg-dark" id="home">
+        <div class="container-lg">
+            <div class="row min-vh-100 align-items-center align-content-center">
+                <div class="col-md-6 mt-5 mt-md-0">
+                    <div class="home-img text-center">
+                        <img src="img/ANSProfile.jpg" class="rounded-circle mw-100" alt="profile image">
+                    </div>
+                </div>
+                <div class="col-md-6 mt-5 mt-md-0 order-md-first">
+                    <div class="home-text">
+                        <p class="text-light mb-1">Hello I'm</p>
+                        <h1 class="text-secondary text-uppercase fs-1 fw-bold"> <span id="techPost"></span> Developer</h1>
+                        <h2 class="fs-4 text-light">Aditya Narayan Soni</h2>
+                        <p class="mt-4 text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam,
+                            voluptatem dolorum! Ratione nemo quibusdam, assumenda repellendus quod velit quos quis animi
+                            numquam maxime adipisci impedit nisi placeat quia dicta iusto.</p>
+                        <a href="#portfolio" class="btn btn-outline-light border-2 fw-bold px-3 mt-3 l-space">My work</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Home Section Ends -->
+
+    <script type="text/JavaScript">
+        let techPost = document.getElementById("techPost");
+        let post = "ASP.NET";
+        let i = 0;
+
+        function animation() {
+            if(i <= post.length)
+            {
+                techPost.innerHTML += post.charAt(i);
+                i++;
+                if(i === post.length)
+                {
+                    if(techPost.innerHTML === "ASP.NET")
+                    {
+                        post = "C#";
+                    }else
+                    {
+                        post = "ASP.NET";
+                    }
+                    setTimeout(() => {
+                        techPost.innerHTML = "";
+                        i = 0;
+                    }, 2000);
+                    i = -4;                   
+                }
+                setTimeout(animation, 600);
+            }
+        }
+
+        addEventListener("load", animation);
+
+        function ani() {
+            if(document.getElementById("post").innerHTML === "ASP.NET")
+            {
+                document.getElementById("post").innerHTML = "C#";
+            }else{
+                document.getElementById("post").innerHTML = "ASP.NET";
+            }
+            setTimeout(ani, 2000);
+        }
+        addEventListener("load", ani);
+    </script>
+
+    <!-- About Section Start -->
+    <section class="about py-5" id="about">
+        <div class="container-lg py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title text-center">
+                        <h2 class="fw-bold mb-5">About Me</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="about-text">
+                        <h3 class="fs-4 mb-3">I'm <span id="post">ASP.NET</span> Developer/h3>
+                        <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo quaerat
+                            odio fugit rerum quis neque, iure nobis dolorum illum repudiandae, exercitationem dolorem
+                            sapiente? Nesciunt vero beatae nisi, illo minima totam!</p>
+                    </div>
+                    <div class="row text-center text-uppercase my-3">
+                        <div class="col-sm-4">
+                            <div class="fact-item">
+                                <h4 class="fs-1 fw-bold">100</h4>
+                                <p class="text-muted">Projects Completed</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="fact-item">
+                                <h4 class="fs-1 fw-bold">90</h4>
+                                <p class="text-muted">Happy Clients</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="fact-item">
+                                <h4 class="fs-1 fw-bold">95</h4>
+                                <p class="text-muted">Positive Reviews</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 d-flex align-items-center">
+                            <a href="" class="btn px-3 btn-outline-dark border-2 fw-bold me-5">Download Resume</a>
+                            <div class="social-links">
+                                <a href="#" class="text-dark me-2"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-dark me-2"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-5 mt-md-0">
+                    <div class="skill-item mb-4">
+                        <h3 class="fs-5">HTML</h3>
+                        <div class="progress" style="height: 8px;" role="progressbar"
+                            aria-label="Animated striped example" aria-valuenow="65" aria-valuemin="0"
+                            aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary"
+                                style="width: 65%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <h3 class="fs-5">CSS</h3>
+                        <div class="progress" style="height: 8px;" role="progressbar"
+                            aria-label="Animated striped example" aria-valuenow="45" aria-valuemin="0"
+                            aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary"
+                                style="width: 45%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <h3 class="fs-5">JavaScript</h3>
+                        <div class="progress" style="height: 8px;" role="progressbar"
+                            aria-label="Animated striped example" aria-valuenow="30" aria-valuemin="0"
+                            aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary"
+                                style="width: 30%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <h3 class="fs-5">Bootstrap</h3>
+                        <div class="progress" style="height: 8px;" role="progressbar"
+                            aria-label="Animated striped example" aria-valuenow="60" aria-valuemin="0"
+                            aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary"
+                                style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <h3 class="fs-5">ASP.NET</h3>
+                        <div class="progress" style="height: 8px;" role="progressbar"
+                            aria-label="Animated striped example" aria-valuenow="70" aria-valuemin="0"
+                            aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary"
+                                style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <h3 class="fs-5">C#</h3>
+                        <div class="progress" style="height: 8px;" role="progressbar"
+                            aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0"
+                            aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary"
+                                style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <h3 class="fs-5">MS SQL</h3>
+                        <div class="progress" style="height: 8px;" role="progressbar"
+                            aria-label="Animated striped example" aria-valuenow="55" aria-valuemin="0"
+                            aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-secondary"
+                                style="width: 55%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+    <hr>
+    <!-- Service section start -->
+    <section class="Service py-5" id="services">
+        <div class="container-lg py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title text-center">
+                        <h2 class="fw-bold mb-5">What I Do</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-item shadow-lg p-4 rounded bg-white">
+                        <div class="icon my-3 text-secondary fs-2">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="fs-5 py-2">Web Development</h3>
+                        <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-item shadow-lg p-4 rounded bg-white">
+                        <div class="icon my-3 text-secondary fs-2">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="fs-5 py-2">Creative Design</h3>
+                        <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="service-item shadow-lg p-4 rounded bg-white">
+                        <div class="icon my-3 text-secondary fs-2">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <h3 class="fs-5 py-2">Photoshop</h3>
+                        <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service section end -->
+    <hr>
+    <!-- Portfolio section start -->
+    <section class="Portfolio py-5" id="portfolio">
+        <div class="container-lg py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title text-center">
+                        <h2 class="fw-bold mb-5">Latest Work</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/1.jpg" class="w-100 img-thumbnail" alt="Portfolio 1">
+                        <h3 class="text-capitalize fs-5 my-2">team section</h3>
+                        <p class="mb-4"><a class="text-danger text-decoration-none" href="#">Live Demo</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/2.jpg" class="w-100 img-thumbnail" alt="Portfolio 1">
+                        <h3 class="text-capitalize fs-5 my-2">app landing page</h3>
+                        <p class="mb-4"><a class="text-danger text-decoration-none" href="#">Live Demo</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/3.jpg" class="w-100 img-thumbnail" alt="Portfolio 1">
+                        <h3 class="text-capitalize fs-5 my-2">Creative team section</h3>
+                        <p class="mb-4"><a class="text-danger text-decoration-none" href="#">Live Demo</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/4.jpg" class="w-100 img-thumbnail" alt="Portfolio 1">
+                        <h3 class="text-capitalize fs-5 my-2">toggle pricing table</h3>
+                        <p class="mb-4"><a class="text-danger text-decoration-none" href="#">Live Demo</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/5.jpg" class="w-100 img-thumbnail" alt="Portfolio 1">
+                        <h3 class="text-capitalize fs-5 my-2">bootstrap 5 image gallery</h3>
+                        <p class="mb-4"><a class="text-danger text-decoration-none" href="#">Live Demo</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="img/portfolio/6.jpg" class="w-100 img-thumbnail" alt="Portfolio 1">
+                        <h3 class="text-capitalize fs-5 my-2">filterable image gallery</h3>
+                        <p class="mb-4"><a class="text-danger text-decoration-none" href="#">Live Demo</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio section end -->
+
+    <!-- freelancer available section start -->
+    <section class="freelancer-section py-5 bg-dark">
+        <div class="container-lg py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <p class="text-light fs-5">Do you have any project ?</p>
+                    <h2 class="fs-1 text-white mb-4">I'm Available For Freelancer Projects</h2>
+                    <a href="#contact" class="btn btn-outline-light fw-bold fs-6 l-space">Hire Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- freelancer available section end -->
+
+    <!-- Testimonial section start -->
+    <section class="testimonial py-5" id="testimonial">
+        <div class="container-lg py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title text-center">
+                        <h2 class="fw-bold mb-5">Testimonials</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-lx-7">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="bg-secondary active" aria-current="true" aria-label="Slide 1"></button>
+                            <button class="bg-secondary" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button class="bg-secondary" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner p-1">
+                            <!-- Testi item start -->
+                            <div class="testi-item carousel-item active bg-white shadow-sm rounded p-4 mb-5">
+                                <div class="testi-author-info d-flex align-items-center">
+                                    <img src="img/testimonial/1.jpg" class="img-thumbnail rounded-circle" alt="author img">
+                                    <div class="author ms-3">
+                                        <h3 class="fs-6 mb-1">Mayank Bajpai</h3>
+                                        <p class="text-muted m-0">SEO Manager</p>
+                                    </div>
+                                </div>
+                                <p class="text-muted mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo
+                                    quaerat
+                                    odio fugit rerum quis neque,</p>
+                                <div class="rating text-secondary">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- Testi item end -->
+                            <!-- Testi item start -->
+                            <div class="testi-item carousel-item bg-white shadow-sm rounded p-4 mb-5">
+                                <div class="testi-author-info d-flex align-items-center">
+                                    <img src="img/testimonial/2.jpg" class="img-thumbnail rounded-circle" alt="author img">
+                                    <div class="author ms-3">
+                                        <h3 class="fs-6 mb-1">Mayank Bajpai</h3>
+                                        <p class="text-muted m-0">SEO Manager</p>
+                                    </div>
+                                </div>
+                                <p class="text-muted mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo
+                                    quaerat
+                                    odio fugit rerum quis neque,</p>
+                                <div class="rating text-secondary">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- Testi item end -->
+                            <!-- Testi item start -->
+                            <div class="testi-item carousel-item bg-white shadow-sm rounded p-4 mb-5">
+                                <div class="testi-author-info d-flex align-items-center">
+                                    <img src="img/testimonial/3.jpg" class="img-thumbnail rounded-circle" alt="author img">
+                                    <div class="author ms-3">
+                                        <h3 class="fs-6 mb-1">Mayank Bajpai</h3>
+                                        <p class="text-muted m-0">SEO Manager</p>
+                                    </div>
+                                </div>
+                                <p class="text-muted mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo
+                                    quaerat
+                                    odio fugit rerum quis neque,</p>
+                                <div class="rating text-secondary">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <!-- Testi item end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial section end -->
+    <hr>
+    <!-- Project Section start -->
+    <section class="project-section py-5">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-lg text-center">
+                    <div class="section-title">
+                        <h2 class="fw-bold mb-5">Project</h2>
+                    </div>
+                </div>
+                <div class="card p-4">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-7 mb-4">
+                            <h3 class="card-title text-center">E-Library</h3>
+                            <h6 class="card-subtitle mb-2 text-muted text-center">Library Management System</h6>
+                            <p class="card-text">
+                                <ul>
+                                    <li class="mb-2">The E-Library is a comprehensive Library Management System built using ASP.NET, C#, MS SQL Server, HTML, and CSS. It is
+                                        designed to simplify the book borrowing process for both users and administrators.</li>
+                                    <li class="mb-2">For users, the system provides an intuitive interface where they can search for books, view their borrowing history, and
+                                        manage their accounts. The robust search functionality allows users to find books based on various parameters such as title,
+                                        author, genre, etc. Once a book is selected, users can check its availability and the number of copies left in the library.
+                                        </li>
+                                    <li class="mb-2">For administrators, the E-Library system offers tools to manage the library's inventory and users. Administrators have the
+                                        exclusive authority to issue books to users. They can also add new books to the library, update book details, and manage
+                                        user accounts.
+                                        </li>
+                                    <li class="mb-2">The E-Library project aims to make library management more efficient and user-friendly, promoting a culture of reading and
+                                        learning.</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-md-5 mb-4">
+                            <div class="project-img">
+                                <img src="img/portfolio/7.png" class="w-100 img-thumbnail" alt="Library Management System">
+                            </div>
+                        </div>
+                      </div>
+                      <a class="btn btn-outline-dark fw-bold border-2 l-space" href="https://gitfront.io/r/NSAditya234/3KpT7bkmx77n/ELibrary/">GitHub Project file</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
+    <!-- Project Section end -->
+
+    <!-- Contact section start -->
+    <section class="contact bg-dark py-5" id="contact">
+        <div class="container-lg py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title text-center">
+                        <h2 class="fw-bold mb-5 text-white l-space">Contact Me</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="contact-item d-flex mb-3">
+                        <div class="icon fs-4 text-light">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="text ms-3">
+                            <h3 class="fs-5 text-white mt-1">Email</h3>
+                            <p class="text-white m-0">soniadityanarayan@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item d-flex mb-3">
+                        <div class="icon fs-4 text-light">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="text ms-3">
+                            <h3 class="fs-5 text-white mt-1">Mobile</h3>
+                            <p class="text-white m-0">+91 8839898858</p>
+                        </div>
+                    </div>
+                    <div class="contact-item d-flex">
+                        <div class="icon fs-4 text-light ">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="text ms-3">
+                            <h3 class="fs-5 text-white mt-1">Visit Office</h3>
+                            <p class="text-white m-0">Venkat RD, Rewa, MP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="contact-form">
+                        <form action="contactus.php" method="post">
+                            <div class="row">
+                                <div class="col-lg-6 mb-4">
+                                    <input type="text" id="name" name="name" placeholder="Your Name" class="form-control form-control-lg fs-6 border-0" required>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <input type="email" id="email" name="email" placeholder="Your Email" class="form-control form-control-lg fs-6 border-0" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 mb-4">
+                                    <input type="text" id="subject" name="subject" placeholder="Subject" class="form-control form-control-lg fs-6 border-0" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 mb-4">
+                                    <textarea rows="5" id="message" name="message" placeholder="Your Message" class="form-control form-control-lg fs-6 border-0" required></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <button type="submit" value="submit" class="btn btn-outline-light border-2 px-3 l-space fw-bold">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact section end -->
+    </div>
+    <!-- Footer section start -->
+    <footer class="footer border-top pt-3">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="text-center text-dark fs-4">&copy;ComputerPry</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer section end -->
+
+    <!-- back to top button start -->
+    <button onclick="topFunction()" class="btn btn-outline-secondary border-2" id="myBtn" title="Go to top"><i class="fa-sharp fa-solid fa-angle-up"></i></button>
+    <!-- back to top button end -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Get the button:
+        let mybutton = document.getElementById("myBtn");
+    
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+    
+        function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+        } else {
+        mybutton.style.display = "none";
+        }
+        }
+    
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+    
+
+</body>
+
+</html>
